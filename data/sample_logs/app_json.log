@@ -1,0 +1,4 @@
+{"level":"ERROR","ts":"2025-10-20T10:05:21Z","service":"checkout","msg":"db timeout","latency_ms":5123,"trace_id":"abc-123"}
+{"level":"WARN","ts":"2025-10-20T10:06:01Z","service":"checkout","msg":"retrying payment","attempt":2}
+{"level":"INFO","ts":"2025-10-20T10:06:05Z","service":"api","msg":"request","path":"/v1/orders","status":200,"latency_ms":123}
+{"level":"ERROR","ts":"2025-10-20T10:06:10Z","service":"api","msg":"upstream 502","status":502,"path":"/v1/cart","trace_id":"def-456"}
