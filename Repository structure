@@ -1,0 +1,28 @@
+insightlens/
+├── README.md
+├── LICENSE
+├── requirements.txt
+├── .env.example
+├── docker-compose.yml
+├── Makefile
+├── insightlens/
+│   ├── app/
+│   │   ├── api.py
+│   │   └── core/
+│   │       ├── config.py
+│   │       ├── embeddings.py
+│   │       ├── index.py
+│   │       ├── log_parser.py
+│   │       ├── anomaly.py
+│   │       └── summarizer.py
+│   └── ui/
+│       ├── Home.py
+│       └── pages/
+│           ├── 1_🔍_Search_Logs.py
+│           ├── 2_🧩_Clusters_&_Anomalies.py
+│           └── 3_🗂️_Datasets.py
+└── data/
+    └── sample_logs/
+        ├── app_json.log
+        ├── apache_access.log
+        └── syslog_sample.log
