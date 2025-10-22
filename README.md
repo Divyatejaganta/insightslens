@@ -27,7 +27,7 @@ An LLM-driven observability tool that ingests application or server logs, cluste
 - Real-world DevOps/Support use case (high employer relevance).
 - Integrates NLP + anomaly detection.
 - Deployable locally with Streamlit and Qdrant/OpenSearch.
-
+####
 insightlens/
 ├── README.md
 ├── LICENSE
