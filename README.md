@@ -1,50 +1,88 @@
-# insightslens
+# InsightsLens
 
-**Convert chaos into clarity:** Ingest logs, detect anomalies, cluster incidents, and get LLM summaries.
+**Convert chaos into clarity:** Ingest logs, detect anomalies, cluster incidents, and get LLM-powered summaries.
 
-**Tagline:**  
+---
+
+## Tagline
+
 *Convert chaos into clarity — one log file at a time.*
 
 ---
 
-**Stack:**  
-- Python  
-- OpenAI API  
-- LangChain  
-- FastAPI  
-- Streamlit
+## Technology Stack
+
+- **Python**
+- **OpenAI API**
+- **LangChain**
+- **FastAPI**
+- **Streamlit**
 
 ---
 
 ## Concept
 
-An LLM-driven observability tool that ingests application or server logs, clusters incidents, and generates intelligent summaries, anomaly trends, and root-cause hypotheses using embeddings and GPT reasoning.
+InsightsLens is an LLM-driven observability tool that ingests application or server logs, clusters incidents, and generates intelligent summaries, anomaly trends, and root-cause hypotheses leveraging embeddings and GPT refinement.
 
 ---
 
-## Why it’s awesome
+## Why InsightsLens?
 
-- Real-world DevOps/Support use case (high employer relevance).
-- Integrates NLP + anomaly detection.
-- Deployable locally with Streamlit and Qdrant/OpenSearch.
+- Real-world DevOps & Support use case — highly relevant for employers.
+- Integrates NLP and anomaly detection for smarter incident management.
+- Easily deployable locally with Streamlit and Qdrant/OpenSearch.
 
+---
 
-##How to Run it
-How to run locally (quick)
-	1.	python3 -m venv .venv && source .venv/bin/activate
-	2.	pip install -r requirements.txt
-	3.	(Optional) cp .env.example .env and set OPENAI_API_KEY for best results.
-	4.	Start API: uvicorn insightlens.app.api:app --reload
-	5.	Start UI: streamlit run insightlens/ui/Home.py
-	6.	Ingest samples: make ingest
+## Getting Started
 
-Or with Docker:
+### Quick Local Setup
+
+1. **Create and activate a virtual environment:**
+   ```bash
+   python3 -m venv .venv && source .venv/bin/activate
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **(Optional)** Copy environment file and set `OPENAI_API_KEY` for best results:
+   ```bash
+   cp .env.example .env
+   # Edit .env to add your OpenAI API key
+   ```
+
+4. **Start the FastAPI backend:**
+   ```bash
+   uvicorn insightlens.app.api:app --reload
+   ```
+
+5. **Start the Streamlit UI:**
+   ```bash
+   streamlit run insightlens/ui/Home.py
+   ```
+
+6. **Ingest sample logs:**
+   ```bash
+   make ingest
+   ```
+
+### Run with Docker
+
+```bash
 docker compose up
+```
 
+---
 
-What you get
-	•	FastAPI backend: /ingest, /search, /summarize
-	•	Streamlit UI (Home + Search + Clusters/Anomalies + Datasets)
-	•	FAISS vector store with metadata parquet
-	•	OpenAI-powered embeddings & summaries (with an offline fallback so it still works without a key)
-	•	Sample logs (JSON app, Apache access, Syslog)
+## Features
+
+- **FastAPI backend:** `/ingest`, `/search`, `/summarize`
+- **Streamlit UI:** Home, Search, Clusters/Anomalies, Datasets
+- **FAISS vector store** with metadata stored as Parquet files
+- **OpenAI-powered embeddings and summaries** (offline fallback available if no API key is provided)
+- **Sample logs:** Includes JSON app logs, Apache access logs, and Syslog
+
+---
